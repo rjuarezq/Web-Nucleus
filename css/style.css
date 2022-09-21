@@ -25,13 +25,19 @@ h1,h2,h3{
 }
 
 h1{
-
+    font-weight: 900;
+    margin: 2rem 0;
 }
 h2{
 
 }
 h3{
 
+}
+
+img{
+    display: block;
+    max-width: 100%;
 }
 
 a{
@@ -43,16 +49,61 @@ a{
     background-image: url(../assets/img/header_bg.svg);
     background-repeat: no-repeat;
     background-position: top right;
+    background-size: 7rem;
 }
 
-@media screen and (min-width: 768px) {
-    .navigation__bar{
-        display: flex;
-        justify-content: space-between;
-    }
+.header__container{
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.navegation{
+    list-style: none;
+}
+
+.option__navegation{
+    color: var(--dark-color);
 }
 
 .logo__header{
     width: 15rem;
     margin: 0 auto 3rem auto;
+}
+
+@media screen and (min-width: 768px) {
+    .header{
+        background-size: 53rem;
+        position: relative;
+    }
+
+    .logo__header{
+        margin: 0;
+    }
+    .navigation__bar{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navegation{
+        display: flex;
+        position: absolute;
+        right: 0;
+    }
+
+    .option__navegation{
+        color: var(--white-color);
+        padding: 0 1.4rem;
+    }
+
+}
+
+@media screen and (min-width: 1280px){
+    .header{
+        background-size: 70rem;
+    }
+    .option__navegation{
+        color: var(--white-color);
+        padding: 0 2.5rem;
+    }
 }
